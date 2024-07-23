@@ -43,6 +43,9 @@ const Nav = () => {
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
             </button>
+            <div className="flex-between">
+              <h1>Hi, {session?.user.name}</h1>
+            </div>
 
             <Link href="/profile">
               <Image
