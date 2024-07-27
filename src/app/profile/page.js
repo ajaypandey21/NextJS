@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const MyProfile = () => {
   const [myPosts, setMyPosts] = useState([]);
   const { data: session } = useSession();
-  console.log("data", session);
   const router = useRouter();
 
   useEffect(() => {
@@ -42,7 +41,7 @@ const MyProfile = () => {
 
   return (
     <>
-      {session?.user ? (
+      {session && session?.user ? (
         <Profile
           name="My"
           desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
